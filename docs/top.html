@@ -1,0 +1,410 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>breaking-tech-news-aggregator-template</title>
+    <style>
+      .our-title {
+        text-align: center;
+        font-size: 1.5em;
+      }
+
+      .submit-link {
+        text-align: center;
+        font-size: 1em;
+      }
+
+      .filters {
+        text-align: center;
+      }
+
+      .filters:after {
+        display: block;
+        clear: both;
+        content: " ";
+        position: relative;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 30%;
+        border-bottom: 1px solid black;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .filters:after {
+          border-bottom: 1px solid white;
+        }
+      }
+
+      .story-upvote {
+        display: none !important;
+      }
+
+      .story-positive-feedback::before {
+        content: "^";
+      }
+
+      .story-title {
+        max-width: 75% !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="our-title">A summary of links</h1>
+    <p class="submit-link">
+      Open a PR
+      <a href="put url here">here</a>
+      if you want to add a new summary.
+    </p>
+    <div class="filters">
+      <a href="./">/ (home)</a>
+      |
+      <a href="./top">/top</a>
+      |
+      <a href="./new">/new</a>
+    </div>
+    <style>body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f0f0f0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #0d49bf;
+}
+
+.stories {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.story {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-bottom: 10px;
+}
+
+.story:after {
+  display: block;
+  clear: both;
+  content: " ";
+  position: relative;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 30%;
+  border-bottom: 1px solid black;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.story > * {
+  margin-top: 5px;
+}
+
+.story-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+
+.story-voting {
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+.story-upvote {
+  text-decoration: none;
+  color: transparent;
+  text-shadow: 0 0 0 grey;
+  cursor: pointer;
+}
+
+.story-upvote.upvoted {
+  color: transparent;
+  text-shadow: 0 0 0 darkgreen;
+  text-align: center;
+}
+
+.story-positive-feedback {
+  text-align: center;
+}
+
+.story-title {
+  font-size: 1.3em;
+  text-decoration: none;
+  font-weight: bold;
+  max-width: 85%;
+  color: #0d49bf;
+}
+
+.story-title:visited {
+  color: #4f6ba4;
+}
+
+.story-meta {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+
+.story-meta > * {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.story-meta::before,
+.story-meta::after {
+  align-self: stretch;
+  content: "";
+  border: 1px solid grey;
+}
+
+.story-date {
+  order: -1;
+}
+
+.story-topics {
+  order: 1;
+}
+
+.story-domain,
+.story-domain:visited {
+  text-decoration: none;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+  color: #0d49bf;
+}
+
+.story-topic,
+.story-topic:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0d49bf;
+}
+
+.story-description {
+  padding-left: 10px;
+  font-size: 1.1em;
+}
+
+.story-relevancy-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: white;
+  }
+
+  .story:after {
+    border-bottom: 1px solid white;
+  }
+
+  .story-upvote.upvoted {
+    color: transparent;
+    text-shadow: 0 0 0 #32b332;
+  }
+
+  .story-title {
+    color: #8ab1ff;
+  }
+
+  .story-title:visited {
+    color: #4f8aff;
+  }
+}
+</style>
+<div class="stories">
+    <div class="story" data-story-id="18">
+    <div class="story-header">
+        <div class="story-voting">
+            <div id="story-upvote-18" class="story-upvote" data-upvote-url="/18" data-story-id="18">🔺</div>
+            <div id="story-positive-feedback-18" class="story-positive-feedback">120</div>
+        </div>
+        <a href="https://example.com" class="story-title">Some example</a>
+    </div>
+    <div class="story-meta">
+      <div class="story-date">01/04/2024</div>
+      <a href="./domain/example.com" class="story-domain">example.com</a>
+      <div class="story-topics"><a class="story-topic" href="./topic/testing">testing</a>
+<a class="story-topic" href="./topic/example">example</a></div>
+    </div>
+    <div class="story-description">
+        <div class="story-summary"><p>Example is a great place to test out different things</p></div>
+        <div class="story-relevancy-title">Why is this relevant to us?</div>
+        <div class="story-relevancy"><p>Every developer should know about it. Summaries and relevancy can contain <a href="https://example.com">links</a>, <strong>bold</strong>, or <em>italic</em></p></div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">const UPVOTED_ITEMS_KEY = "upvotedStoryIds";
+
+// @ts-ignore
+const IS_GOOGLE_SCRIPT = typeof google !== "undefined";
+
+/**
+ * Get upvoted story ids from localstorage
+ *
+ * @returns {number[]}
+ */
+function getUpvotedStoryIds() {
+  return (
+    localStorage
+      .getItem(UPVOTED_ITEMS_KEY)
+      ?.split(",")
+      .map((x) => parseInt(x)) || []
+  );
+}
+
+/**
+ * Set the upvoted story ids in localstorage
+ *
+ * @param {number[]} upvotedStoryIds
+ */
+function setUpvotedStoryIds(upvotedStoryIds) {
+  localStorage.setItem(
+    UPVOTED_ITEMS_KEY,
+    upvotedStoryIds.map((x) => `${x}`).join(","),
+  );
+}
+
+/**
+ * @typedef {Object} UpdatedPositiveFeedbackCount
+ * @property {number} positiveFeedback
+ */
+
+/**
+ * Handle clicking on an upvote If already upvoted, do nothing. There is no
+ * downvoting or unvoting. Sends a request to the backend to increment the
+ * score.
+ *
+ * @param {Event} event
+ */
+async function upvoteClick(event) {
+  const clickedElement = /** @type {HTMLElement | null} */ (event.target);
+
+  if (clickedElement === null) {
+    console.log("No element");
+    return;
+  }
+
+  // already upvoted
+  if ([...clickedElement.classList].includes("upvoted")) {
+    return;
+  }
+
+  const url = clickedElement.getAttribute("data-upvote-url");
+  const id = parseInt(clickedElement.getAttribute("data-story-id") || "NaN");
+
+  // shouldn't be possible
+  if (!url) {
+    return;
+  }
+
+  // shouldn't be possible
+  if (!id || isNaN(id)) {
+    return;
+  }
+
+  // add upvoted class if it's not there already
+  clickedElement.classList.toggle("upvoted");
+
+  if (IS_GOOGLE_SCRIPT) {
+    // @ts-ignore
+    const anyGoogle = /** @type {any} */ (google);
+    anyGoogle.script.run
+      .withSuccessHandler((/** @type {number} */ newCount) => {
+        const maybePositiveFeedbackElement = document.getElementById(
+          `story-positive-feedback-${id}`,
+        );
+
+        if (maybePositiveFeedbackElement === null) {
+          console.log(
+            "Positive feedback element was missing from the DOM for some reason",
+          );
+          return;
+        }
+
+        maybePositiveFeedbackElement.innerText = `${newCount}`;
+
+        const upvotedStoryIds = getUpvotedStoryIds();
+        upvotedStoryIds.push(id);
+        setUpvotedStoryIds(upvotedStoryIds);
+      })
+      .upvoteStory(id, url);
+  } else {
+    const response = /** @type {UpdatedPositiveFeedbackCount} */ (
+      await (
+        await fetch(url, {
+          method: "POST",
+          mode: "no-cors",
+          redirect: "follow",
+        })
+      ).json()
+    );
+
+    const maybePositiveFeedbackElement = document.getElementById(
+      `story-positive-feedback-${id}`,
+    );
+
+    if (maybePositiveFeedbackElement === null) {
+      console.log(
+        "Positive feedback element was missing from the DOM for some reason",
+      );
+      return;
+    }
+
+    maybePositiveFeedbackElement.innerText = `${response.positiveFeedback}`;
+
+    const upvotedStoryIds = getUpvotedStoryIds();
+    upvotedStoryIds.push(id);
+    setUpvotedStoryIds(upvotedStoryIds);
+  }
+}
+
+/** Make sure previously upvoted stories by this user are still upvoted. */
+function restoreUpvotedStoryIdsToDom() {
+  const upvotedStoryIds = getUpvotedStoryIds();
+
+  for (const id of upvotedStoryIds) {
+    const maybePositiveFeedbackElement = document.getElementById(
+      `story-upvote-${id}`,
+    );
+
+    if (!maybePositiveFeedbackElement) {
+      continue;
+    }
+
+    maybePositiveFeedbackElement.classList.add("upvoted");
+  }
+}
+
+document.addEventListener(
+  "DOMContentLoaded",
+  restoreUpvotedStoryIdsToDom,
+  false,
+);
+
+[...document.getElementsByClassName("story-upvote")].forEach((element) =>
+  element.addEventListener("click", upvoteClick),
+);
+</script>
+  </body>
+</html>
