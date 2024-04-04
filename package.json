@@ -1,0 +1,21 @@
+{
+  "name": "breaking-tech-news-aggregator-template",
+  "version": "1.0.0",
+  "description": "A template for generating a curated link aggregator for breaking tech news stories",
+  "main": "src/index.ts",
+  "scripts": {
+    "generate": "rm -r docs/* && ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "eeue56",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "simple-link-aggregator": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "ts-node": "^10.9.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-jsdoc": "^1.3.0"
+  }
+}

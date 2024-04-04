@@ -1,0 +1,30 @@
+name: Build pages
+on: [pull_request, push]
+permissions:
+  contents: write
+jobs:
+  build-upload:
+    runs-on: [ubuntu]
+    timeout-minutes: 60
+    name: Build
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+      - name: Install ts-node
+        run: npm install -g ts-node
+      - name: Install deps
+        run: npm ci
+      - name: Run the generator
+        run: npm run generate
+      - name: Commit markdown
+        id: commit
+        run: |
+          git add -f docs/
+          git config --global user.name ''
+          git config --global user.email ''
+          git commit -am ":robot: generating sites page..."
+          git push

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <style>
+      .our-title {
+        text-align: center;
+        font-size: 1.5em;
+      }
+
+      .submit-link {
+        text-align: center;
+        font-size: 1em;
+      }
+
+      .filters {
+        text-align: center;
+      }
+
+      .filters:after {
+        display: block;
+        clear: both;
+        content: " ";
+        position: relative;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 30%;
+        border-bottom: 1px solid black;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .filters:after {
+          border-bottom: 1px solid white;
+        }
+      }
+
+      .story-upvote {
+        display: none !important;
+      }
+
+      .story-positive-feedback::before {
+        content: "^";
+      }
+
+      .story-title {
+        max-width: 75% !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="our-title">A summary of links</h1>
+    <p class="submit-link">
+      Open a PR
+      <a href="put url here">here</a>
+      if you want to add a new summary.
+    </p>
+    <div class="filters">
+      <a href="{home}">/ (home)</a>
+      |
+      <a href="{top}">/top</a>
+      |
+      <a href="{new}">/new</a>
+    </div>
+    {contents}
+  </body>
+</html>
