@@ -4,7 +4,7 @@ permissions:
   contents: write
 jobs:
   build-upload:
-    runs-on: [ubuntu]
+    runs-on: ubuntu-latest
     timeout-minutes: 60
     name: Build
     steps:
