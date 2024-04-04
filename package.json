@@ -4,7 +4,7 @@
   "description": "A template for generating a curated link aggregator for breaking tech news stories",
   "main": "src/index.ts",
   "scripts": {
-    "generate": "rm -r docs/* && ts-node src/index.ts"
+    "generate": "rm -rf docs/ && ts-node src/index.ts"
   },
   "keywords": [],
   "author": "eeue56",
