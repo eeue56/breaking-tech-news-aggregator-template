@@ -24,7 +24,7 @@ jobs:
         id: commit
         run: |
           git add -f docs/
-          git config --global user.name ''
-          git config --global user.email ''
+          git config --global user.name 'markdown committer'
+          git config --global user.email 'eeue56@users.noreply.github.com'
           git commit -am ":robot: generating sites page..."
           git push
